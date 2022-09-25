@@ -1,4 +1,5 @@
 import { MdOutlinePendingActions } from 'react-icons/md';
+import { NumericFormat } from 'react-number-format';
 
 const RowTable = () => {
   return (
@@ -13,7 +14,13 @@ const RowTable = () => {
       </td>
       <td className='... border border-slate-300'>
         <div className='flex justify-center gap-3 align-middle'>
-          Rp.100,000.00
+          <NumericFormat
+            displayType='text'
+            value={500000}
+            prefix='Rp. '
+            thousandSeparator='.'
+            decimalSeparator=','
+          />
         </div>
       </td>
 
