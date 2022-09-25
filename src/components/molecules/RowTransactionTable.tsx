@@ -1,7 +1,7 @@
+import Link from 'next/link';
 import { MdOutlinePendingActions } from 'react-icons/md';
 import { NumericFormat } from 'react-number-format';
-
-const RowTable = () => {
+const RowTransactionTable = () => {
   return (
     <tr className='h-20 text-gray-600'>
       <td className='... border border-slate-300'>
@@ -23,15 +23,23 @@ const RowTable = () => {
           />
         </div>
       </td>
-
       <td className='... border border-slate-300'>
         <div className='flex justify-center gap-3 align-middle'>
           <MdOutlinePendingActions size={50} />
           Pending
         </div>
       </td>
+      <td className='... border border-slate-300'>
+        <div className='flex justify-center gap-3 align-middle'>
+          <Link type='button' href='/member/transactions/detail'>
+            <a className='mr-4 rounded-full bg-purple-400 py-2 px-7 text-white'>
+              Details
+            </a>
+          </Link>
+        </div>
+      </td>
     </tr>
   );
 };
 
-export default RowTable;
+export default RowTransactionTable;

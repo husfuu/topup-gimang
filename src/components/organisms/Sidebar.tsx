@@ -12,7 +12,7 @@ import {
   MdOutlineSpaceDashboard,
 } from 'react-icons/md';
 
-function SideNavbar() {
+function Sidebar() {
   return (
     <div>
       <Disclosure as='nav'>
@@ -98,4 +98,4 @@ function SideNavbar() {
   );
 }
 
-export default SideNavbar;
+export default Sidebar;
